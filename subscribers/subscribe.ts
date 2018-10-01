@@ -11,7 +11,7 @@ export const subscribe = (queueName: string, onMessage: (msg: amqp.Message | nul
         const assertion = await channel.assertExchange(exchange, 'fanout', { durable: false });
         console.log(`${assertion.exchange} exchange asserted.`);
 
-        const q = await channel.assertQueue(queueName, { exclusive: true });
+        const q = await channel.assertQueue(queueName, { exclusive: true, durable: true });
         console.log('waiting for messages on: ', q.queue);
         await channel.bindQueue(q.queue, exchange, '');
 
