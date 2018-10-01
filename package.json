@@ -1,0 +1,24 @@
+{
+  "name": "restonode.messaging",
+  "author": {
+    "name": "Anas Karkoukli"
+  },
+  "version": "1.0.0",
+  "scripts": {
+    "customer-notifier": "ts-node ./subscribers/customerNotifier.ts",
+    "restaurant-notifier": "ts-node ./subscribers/restaurantNotifier.ts",
+    "test-publisher": "ts-node ./test/testPublisher.ts"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@types/amqplib": "^0.5.8",
+    "amqplib": "^0.5.2",
+    "dotenv": "^6.0.0",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^4.0.3"
+  }
+}
