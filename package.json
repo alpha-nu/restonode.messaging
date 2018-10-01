@@ -7,7 +7,10 @@
   "scripts": {
     "customer-notifier": "ts-node ./subscribers/customerNotifier.ts",
     "restaurant-notifier": "ts-node ./subscribers/restaurantNotifier.ts",
-    "test-publisher": "ts-node ./test/testPublisher.ts"
+    "test-publisher": "ts-node ./test/testPublisher.ts",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "test": "yarn tslint && jest --forceExit --detectOpenHandles",
+    "test-with-coverage": "yarn tslint && jest --forceExit --coverage --verbose --detectOpenHandles"
   },
   "license": "ISC",
   "dependencies": {
@@ -19,6 +22,9 @@
     "typescript": "^3.1.1"
   },
   "devDependencies": {
-    "@types/dotenv": "^4.0.3"
+    "@types/dotenv": "^4.0.3",
+    "@types/jest": "^23.3.2",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.3"
   }
 }

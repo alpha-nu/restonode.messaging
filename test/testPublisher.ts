@@ -1,5 +1,6 @@
 import * as amqp from 'amqplib';
 import * as dotenv from 'dotenv';
+import sampleOrder from './sampleOrder';
 
 dotenv.config();
 
@@ -10,7 +11,7 @@ amqp.connect(process.env.AMQP_CONNECTION!).then(async conn => {
     console.log(`TEST PUBLISHER: ${assertion.exchange} exchange asserted.`);
 
     setInterval(async () => {
-        const msg = JSON.stringify({ order: `Hey! fake ordered published @ ${new Date().toLocaleTimeString()}` });
+        const msg = JSON.stringify(sampleOrder);
         await channel.publish(exchange, '', Buffer.from(msg));
         console.log('published. ', msg);
     }, 2000);
