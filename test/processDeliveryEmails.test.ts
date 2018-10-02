@@ -4,7 +4,7 @@ import processDeliveryEmails from '../src/subscribers/processDeliveryEmails';
 
 describe('processDeliveryEmails', () => {
     it('send an email to each restaurant in a delivery order', () => {
-        const mockSendEmailAction = jest.fn(_ => _);
+        const mockSendEmailAction = jest.fn();
 
         processDeliveryEmails(sampleOrder, mockSendEmailAction);
 
