@@ -5,11 +5,12 @@
   },
   "version": "1.0.0",
   "scripts": {
-    "customer-notifier": "ts-node ./subscribers/customerNotifier.ts",
-    "restaurant-notifier": "ts-node ./subscribers/restaurantNotifier.ts",
-    "test-publisher": "ts-node ./test/testPublisher.ts",
+    "customer-notifier": "ts-node ./src/subscribers/customerNotifier.ts",
+    "restaurant-notifier": "ts-node ./src/subscribers/restaurantNotifier.ts",
+    "test-publisher": "ts-node ./testPublisher.ts",
     "tslint": "tslint -c tslint.json -p tsconfig.json",
     "test": "yarn tslint && jest --forceExit --detectOpenHandles",
+    "test-watch": "yarn test -- --watchAll",
     "test-with-coverage": "yarn tslint && jest --forceExit --coverage --verbose --detectOpenHandles"
   },
   "license": "ISC",

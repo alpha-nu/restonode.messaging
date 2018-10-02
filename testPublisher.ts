@@ -13,6 +13,6 @@ amqp.connect(process.env.AMQP_CONNECTION!).then(async conn => {
     setInterval(async () => {
         const msg = JSON.stringify(sampleOrder);
         await channel.publish(exchange, '', Buffer.from(msg));
-        console.log('published. ', msg);
-    }, 2000);
+        console.log(`@${new Date().toLocaleString()} ` , msg);
+    }, 5000);
 });

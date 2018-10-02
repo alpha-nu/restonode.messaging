@@ -40,7 +40,7 @@ To test the sanity of the RabbitMQ installation and that the messaging module wo
 ```shell
 yarn test-publisher
 ```
-Once run, it will emit a new order with the same JSON structure as it would be received from the restonode.api.
+Once run, it will emit a new order with the same JSON structure as it would be received from the restonode.api. **a setInterval function is used to emit a message every X seconds**
 
 The two running consumers should log the results or processing that test order to the console.
 
