@@ -16,7 +16,7 @@ export const subscribe = (queueName: string, onMessage: (msg: amqp.Message | nul
         await channel.bindQueue(q.queue, exchange, '');
 
         await channel.consume(q.queue, onMessage, { noAck: true });
-    });
+    }).error(_ => console.log(_.toString()));
 };
 
 export const toJson = (message: amqp.Message) => JSON.parse(message.content.toString('utf-8'));
