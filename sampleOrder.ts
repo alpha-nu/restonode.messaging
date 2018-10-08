@@ -7,10 +7,16 @@ export default ({
             },
             eta: '21 mins',
             meals: [
-                'house burger',
-                'winter stew'
+                {
+                    name: 'house burger',
+                    quantity: 1
+                },
+                {
+                    name: 'winter stew',
+                    quantity: 3
+                }
             ],
-            subTotal: 390
+            subTotal: 870
         },
         {
             restaurant: {
@@ -19,7 +25,10 @@ export default ({
             },
             eta: '30 mins',
             meals: [
-                'deep dish pizza'
+                {
+                    name: 'deep dish pizza',
+                    quantity: 1
+                }
             ],
             subTotal: 350
         },
@@ -30,13 +39,19 @@ export default ({
             },
             eta: '15 mins',
             meals: [
-                'fried rice',
-                'Peking Duck'
+                {
+                    name: 'fried rice',
+                    quantity: 2
+                },
+                {
+                    name: 'Peking Duck',
+                    quantity: 1
+                }
             ],
-            subTotal: 1160
+            subTotal: 1460
         }
     ],
-    grandTotal: 1900,
+    grandTotal: 2680,
     customer: {
         userName: 'greedyPete',
         phone: '2222222222',

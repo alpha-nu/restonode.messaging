@@ -5,7 +5,7 @@ export default (delivery: IDelivery, customer: ICustomer) => {
         `Delivery for ${customer.userName}`,
         customer.address,
         'Items:',
-        ...delivery.meals,
+        ...delivery.meals.map(({ name, quantity }) => `${name} (quantity: ${quantity})`),
         `Total: ${delivery.subTotal}`
     ].join('\n');
 };

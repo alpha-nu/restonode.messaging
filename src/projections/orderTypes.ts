@@ -3,10 +3,15 @@ export interface IRestaurant {
     email: string;
 }
 
+export interface IMeal {
+    name: string;
+    quantity: number;
+}
+
 export interface IDelivery {
     restaurant: IRestaurant;
     eta: string;
-    meals: string[];
+    meals: IMeal[];
     subTotal: number;
 }
 

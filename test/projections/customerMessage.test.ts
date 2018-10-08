@@ -12,7 +12,7 @@ describe('customerMessage', () => {
             'great eats in 21 mins',
             'fancy eats in 30 mins',
             'Chinese Delights in 15 mins',
-            'Your grand total is: 1900.',
+            'Your grand total is: 2680.',
             'Come again!'].join('\n'));
     });
 });

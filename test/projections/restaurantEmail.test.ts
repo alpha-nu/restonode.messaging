@@ -10,8 +10,8 @@ describe('restaurantEmail', () => {
             },
             eta: '',
             meals: [
-                'meal 1',
-                'meal 2'
+                { name: 'meal 1', quantity: 2 },
+                { name: 'meal 2', quantity: 1 }
             ],
             subTotal: 4001
         };
@@ -26,8 +26,8 @@ describe('restaurantEmail', () => {
             'Delivery for user',
             'delivery address',
             'Items:',
-            'meal 1',
-            'meal 2',
+            'meal 1 (quantity: 2)',
+            'meal 2 (quantity: 1)',
             'Total: 4001'
         ].join('\n'));
     });
